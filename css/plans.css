@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+.box .head {
+    border: 3px solid white;
+}
+
+.box .green {
+    outline: 3px solid var(--green-color);
+}
+
+.box .blue {
+    outline: 3px solid var(--blue-color);
+}
+
+.box .orange {
+    outline: 3px solid var(--orange-color);
+}
+
+.box .head .text {
+    font-size: 40px;
+}
+
+.box:not(:last-child) .head .text>span {
+    position: absolute;
+    left: 210px;
+    font-size: 30px;
+}
+
+.box:last-child .head .text>span {
+    position: absolute;
+    left: 200px;
+    font-size: 30px;
+}
+
+.box .info {
+    border-bottom: 1px solid #eee;
+}
+
+.box a {
+    padding: 3px 10px;
+}

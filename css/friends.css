@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+.page .content .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* Start box */
+.box .icon i {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.box .icon i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.box img {
+    width: 100px;
+    border-radius: 50%;
+    margin: -11px auto 0;
+}
+
+.box .text {
+    border-bottom: 1px solid #eee;
+}
+
+.box .vip {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    opacity: .2;
+}
+
+.box .footer-box {
+    border-top: 1px solid #eee;
+}
+
+.box .footer-box a {
+    padding: 2px 10px;
+}
+
+/* End box */

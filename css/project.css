@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+/* Start box */
+.box .image {
+    border-bottom: 2px solid #eee;
+}
+
+.box .image img {
+    border: 2px solid white;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.box .image img:hover {
+    z-index: 1;
+}
+
+.box .image img:not(:first-child) {
+    margin-left: -15px;
+}
+
+.box .jobs {
+    justify-content: end;
+    border-bottom: 2px solid #eee;
+}
+
+@media (max-width: 767px) {
+    .box .jobs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+.box .progress {
+    height: 8px;
+    width: 250px;
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+    .box .progress {
+        width: 150px;
+    }
+}
+
+.box .progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    border-radius: 20px;
+}
+
+.box .progress .red {
+    background-color: var(--red-color);
+    width: 55%;
+}
+
+.box .progress .green {
+    background-color: var(--green-color);
+    width: 80%;
+}
+
+.box .progress .blue {
+    background-color: var(--blue-color);
+    width: 100%;
+}
+
+/* End box */

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+/* Start toggle */
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.toggle-switch::before {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    content: '\f00d';
+    font-weight: 900;
+    background-color: white;
+    color: #aaa;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 4px;
+    left: 4px;
+    transition: .3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: '\f00c';
+    font-weight: 900;
+    left: 50px;
+}
+
+/* End toggle */
+/* Start textarea */
+.control form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.general .email {
+    cursor: no-drop;
+    width: calc(100% - 80px);
+    background-color: #f0f4f8;
+    color: #ddd;
+}
+
+/* End textarea */
+/* Start Security */
+.security .box {
+    border-top: 1px solid #ccc;
+}
+
+.security .devices {
+    border-top: 1px solid #ccc;
+}
+
+.security .password>a,
+.security .devices>a {
+    transition: .3s;
+}
+
+.security .password>a:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.security .devices>a:hover {
+    background-color: black;
+    color: #eee;
+} 
+
+/* End Security */
+/* Start social */
+.social i {
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    padding: 10px 20px;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: .3s;
+}
+
+.social input {
+    flex: 1;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 0 6px 6px 0;
+}
+
+.social .box:focus-within>i {
+    color: black;
+}
+
+/* End social */
+/* Start Widgets */
+.widgets .box input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.widgets .box label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.widgets .box label::before,
+.widgets .box label::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+.widgets .box label::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+}
+
+.widgets .box label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+
+.widgets .box label::after {
+    font-family: var(--fa-style-family-classic);
+    content: '\f00c';
+    font-weight: 900;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(360deg);
+}
+
+.widgets .box input[type="checkbox"]:checked+label::after {
+    transform: scale(1);
+}
+
+/* End Widgets */
+/* Start Backup */
+.backup .type input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.backup .type label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.backup .type label::before,
+.backup .type label::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.backup .type label::before {
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    left: 0;
+}
+
+.backup .type label::after {
+    left: 4.5px;
+    width: 10px;
+    height: 10px;
+}
+
+.backup .type input[type="radio"]:checked+label::after {
+    background-color: var(--blue-color);
+}
+
+.backup .type input[type="radio"]:checked+label::before,
+.backup .type label:hover::before {
+    border-color: var(--blue-color);
+}
+
+.backup .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    border-top: 2px solid #eee;
+}
+
+.backup .box input[type="radio"] {
+    appearance: none;
+}
+
+.backup .box label {
+    border: 2px solid #eee;
+    text-align: center;
+    padding: 15px 0;
+    transition: .3s;
+}
+
+.backup .box label:hover {
+    color: var(--blue-color);
+}
+
+.backup .box input[type="radio"]:checked+label {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+
+/* End Backup */

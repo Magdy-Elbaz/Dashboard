@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+/* Start profile */
+.profile .info {
+    width: 230px;
+}
+
+.profile .info img {
+    width: 125px;
+}
+
+.profile .progress {
+    background-color: #eee;
+    width: 60%;
+    height: 6px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.profile .progress>span {
+    height: 3px;
+    background-color: var(--blue-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+}
+
+.profile .box-right {
+    flex: 1;
+}
+
+.profile .box-right::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: .5px;
+    height: 70%;
+    background-color: #eee;
+}
+
+.profile .box:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.profile .box {
+    transition: .3s;
+}
+
+.profile .box:hover {
+    background-color: #f6f6f6;
+}
+
+.profile .toggle-switch {
+    height: 20px;
+}
+
+.profile .toggle-switch::before {
+    height: 12px;
+    width: 12px;
+    font-size: 9px;
+}
+
+.profile .toggle-checkbox:checked+.toggle-switch::before {
+    left: 60px;
+    color: var(--blue-color);
+}
+
+.skills {
+    width: 400px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .skills {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 767px) {
+    .skills {
+        width: 100%;
+    }
+}
+
+.skills .box {
+    border-bottom: 1px solid #eee;
+}
+
+.activities {
+    flex: 1;
+}
+
+.activities .box:not(:last-of-type) {
+    border-bottom: 2px solid #eee;
+}
+
+.activities .box img{
+    width: 70px;
+    margin-right: 10px;
+}
+
+/* End profile */
